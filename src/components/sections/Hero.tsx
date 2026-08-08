@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { createWhatsAppUrl, siteConfig } from "@/config/site";
 
 export function Hero() {
@@ -52,19 +54,15 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="hero-art" aria-hidden="true">
-        <div className="hero-art__frame">
-          <span className="hero-art__index">01 / 06</span>
-          <span className="hero-art__monogram">Z</span>
-          <span className="hero-art__services">
-            Detail
-            <br />
-            Correct
-            <br />
-            Protect
-          </span>
-          <span className="hero-art__signature">Laguna · MX</span>
-        </div>
+      <div className="hero-art">
+        <Image
+          className="hero-art__image"
+          src="/images/hero.jpg"
+          alt="Fachada de Zealous Laguna Auto Studio con una camioneta en la entrada"
+          fill
+          preload
+          sizes="(min-width: 64rem) 45vw, 100vw"
+        />
       </div>
     </section>
   );

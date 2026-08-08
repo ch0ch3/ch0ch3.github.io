@@ -248,89 +248,18 @@ a {
 .hero-art {
   position: relative;
   min-height: clamp(22rem, 92vw, 32rem);
-  padding: var(--page-padding);
   overflow: hidden;
   border-top: 1px solid rgb(255 255 255 / 12%);
   background: var(--color-night-raised);
 }
 
-.hero-art::before {
+.hero-art__image {
   position: absolute;
-  width: clamp(22rem, 92vw, 48rem);
-  aspect-ratio: 1.7;
-  right: clamp(-11rem, -18vw, -5rem);
-  bottom: clamp(1rem, 6vw, 4rem);
-  border: clamp(2.5rem, 12vw, 6rem) solid #202020;
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 1px rgb(255 255 255 / 12%),
-    inset 0 0 0 1px rgb(255 255 255 / 8%);
-  content: "";
-  transform: rotate(-12deg);
-}
-
-.hero-art::after {
-  position: absolute;
-  top: -12%;
-  right: 18%;
-  width: 2px;
-  height: 130%;
-  background: var(--color-brand);
-  content: "";
-  transform: rotate(27deg);
-  transform-origin: center;
-}
-
-.hero-art__frame {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  min-height: 100%;
-  padding: clamp(1.2rem, 5vw, 2.5rem);
-  border: 1px solid rgb(255 255 255 / 16%);
-  grid-template-columns: 1fr auto;
-  grid-template-rows: auto 1fr auto;
-}
-
-.hero-art__index,
-.hero-art__signature {
-  color: var(--color-on-dark-muted);
-  font-family: var(--font-condensed);
-  font-size: 0.65rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.hero-art__monogram {
-  align-self: center;
-  font-family: var(--font-condensed);
-  font-size: clamp(11rem, 54vw, 22rem);
-  font-weight: 900;
-  grid-column: 1 / -1;
-  grid-row: 1 / -1;
-  letter-spacing: -0.09em;
-  line-height: 0.8;
-  opacity: 0.08;
-}
-
-.hero-art__services {
-  align-self: center;
-  font-family: var(--font-condensed);
-  font-size: clamp(2rem, 10vw, 4.75rem);
-  font-weight: 900;
-  grid-column: 1 / -1;
-  grid-row: 2;
-  letter-spacing: -0.04em;
-  line-height: 0.82;
-  text-transform: uppercase;
-}
-
-.hero-art__signature {
-  align-self: end;
-  grid-column: 2;
-  grid-row: 3;
-  text-align: right;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .services {
@@ -531,10 +460,6 @@ a {
     min-height: 100%;
     border-top: 0;
     border-left: 1px solid rgb(255 255 255 / 12%);
-  }
-
-  .hero-art__services {
-    font-size: clamp(3.5rem, 4.9vw, 5rem);
   }
 
   .service-card {
