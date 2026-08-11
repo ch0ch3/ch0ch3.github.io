@@ -144,7 +144,13 @@ La geometría es rectangular por defecto. Los bordes de un píxel recuerdan plan
 
 - **Hero:** fotografía panorámica provisional de un vehículo moderno en estudio oscuro, desaturada y oscurecida con una cobertura de legibilidad, titular de máximo tres líneas y el logotipo oficial blanco centrado dentro de la navegación superpuesta.
 - **Action:** un solo botón “Agenda tu cita” enlaza al mensaje confirmado de evaluación por WhatsApp. El enlace general de WhatsApp permanece en la navegación.
-- **Workshop Proof:** la fachada real vive en un bloque separado inmediatamente después del hero, dentro de un marco blanco cálido y antes de “Quiénes somos”.
+- **Workshop Proof:** la fachada real vive en un bloque separado inmediatamente después del hero, dentro de un marco blanco cálido y antes de “Quiénes somos”. Usa proporción `4:5` en móvil vertical, `4:3` en tablet y `16:10` en escritorio para mantener un encuadre estable sin alturas arbitrarias.
+
+### Story
+
+- **Source:** conserva íntegros los cuatro párrafos confirmados en Canva; no se resumen ni se sustituyen por copy genérico.
+- **Hierarchy:** “¿Quiénes somos?” funciona como pregunta roja dentro del mismo título semántico que “Pasión por los autos, dedicación en cada detalle”.
+- **Responsive:** lectura lineal en móvil y retícula de doce columnas desde tablet; en horizontal táctil respeta las áreas seguras laterales.
 
 ### Service Editorial Grid
 

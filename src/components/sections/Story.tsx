@@ -6,7 +6,10 @@ export function Story() {
       <div className="story__inner">
         <div className="story__heading">
           <h2 id="story-title" className="story__title">
-            Dedicación en cada detalle.
+            <span className="story__title-question">¿Quiénes somos?</span>
+            <span className="story__title-promise">
+              Pasión por los autos, dedicación en cada detalle
+            </span>
           </h2>
         </div>
 
@@ -19,11 +22,19 @@ export function Story() {
           <p>
             Para nosotros, un auto es mucho más que un medio de transporte. Es
             parte de historias, experiencias y momentos importantes; por eso,
-            cada vehículo recibe atención, paciencia y cuidado preciso.
+            cada vehículo que llega a nuestras manos recibe atención,
+            dedicación y cuidado en cada detalle.
           </p>
           <p>
-            Trabajamos cada vehículo como trabajaríamos el nuestro: con técnica,
-            dedicación y un compromiso constante con el acabado final.
+            Nos especializamos en detallado automotriz, pulido, corrección de
+            pintura, recubrimientos cerámicos, pintura y hojalatería, combinando
+            técnica, productos de calidad y un compromiso constante por lograr
+            excelentes acabados.
+          </p>
+          <p>
+            En Zealous trabajamos cada vehículo como trabajaríamos el nuestro:
+            con paciencia, precisión y, sobre todo, con una auténtica pasión por
+            los autos.
           </p>
         </div>
 
