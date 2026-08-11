@@ -1,3 +1,17 @@
+export type ServiceConfig = {
+  name: string;
+  shortName: string;
+  description: string;
+  whatsappMessage: string;
+  catalogEligible: boolean;
+  catalogUrl: string | null;
+  image: {
+    src: string;
+    alt: string;
+    position: string;
+  };
+};
+
 export type SiteConfig = {
   businessName: string;
   primaryBrand: string;
@@ -16,12 +30,7 @@ export type SiteConfig = {
     appointmentMessage: string;
     informationMessage: string;
   };
-  services: readonly {
-    name: string;
-    shortName: string;
-    description: string;
-    whatsappMessage: string;
-  }[];
+  services: readonly ServiceConfig[];
   pending: {
     hours: string | null;
     socialProfiles: string | null;
@@ -63,6 +72,13 @@ export const siteConfig = {
         "Limpieza profunda y cuidado preciso de cada superficie para renovar la apariencia de tu vehículo.",
       whatsappMessage:
         "Hola, quiero información sobre el servicio de detallado automotriz de Zealous Laguna Auto Studio.",
+      catalogEligible: true,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/interior-detailing.jpg",
+        alt: "Interior limpio de un vehículo moderno dentro de un estudio automotriz",
+        position: "center",
+      },
     },
     {
       name: "Pulido",
@@ -71,6 +87,13 @@ export const siteConfig = {
         "Recuperamos brillo y profundidad, reduciendo opacidad, marcas superficiales y pequeños rayones.",
       whatsappMessage:
         "Hola, quiero información sobre el servicio de pulido de Zealous Laguna Auto Studio.",
+      catalogEligible: true,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/paint-polishing.jpg",
+        alt: "Pulido de la pintura de un vehículo moderno con una máquina inalámbrica",
+        position: "center",
+      },
     },
     {
       name: "Corrección de Pintura",
@@ -79,6 +102,13 @@ export const siteConfig = {
         "Un proceso especializado para reducir micro-rayones, marcas circulares y defectos visibles en la pintura.",
       whatsappMessage:
         "Hola, quiero información sobre corrección de pintura en Zealous Laguna Auto Studio.",
+      catalogEligible: true,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/paint-correction.jpg",
+        alt: "Comparación de defectos y acabado corregido en la pintura de un vehículo moderno",
+        position: "center",
+      },
     },
     {
       name: "Recubrimiento Cerámico",
@@ -87,6 +117,13 @@ export const siteConfig = {
         "Mayor brillo, efecto hidrofóbico y una barrera de protección frente a contaminantes y agentes externos.",
       whatsappMessage:
         "Hola, quiero información sobre recubrimiento cerámico en Zealous Laguna Auto Studio.",
+      catalogEligible: true,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/ceramic-coating.jpg",
+        alt: "Aplicación de recubrimiento cerámico sobre la pintura de un vehículo moderno",
+        position: "center",
+      },
     },
     {
       name: "Hojalatería",
@@ -94,7 +131,14 @@ export const siteConfig = {
       description:
         "Reparamos golpes y daños en la carrocería buscando recuperar las líneas y formas originales del vehículo.",
       whatsappMessage:
-        "Hola, quiero información sobre el servicio de hojalatería de Zealous Laguna Auto Studio.",
+        "Hola, quiero solicitar una valoración de hojalatería para mi vehículo con Zealous Laguna Auto Studio.",
+      catalogEligible: false,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/bodywork-repair.jpg",
+        alt: "Valoración de una abolladura en la carrocería de un vehículo moderno",
+        position: "center",
+      },
     },
     {
       name: "Pintura Automotriz",
@@ -102,7 +146,14 @@ export const siteConfig = {
       description:
         "Preparación, igualación de color y repintado de piezas con atención meticulosa al acabado final.",
       whatsappMessage:
-        "Hola, quiero información sobre pintura automotriz en Zealous Laguna Auto Studio.",
+        "Hola, quiero solicitar una valoración de pintura automotriz para mi vehículo con Zealous Laguna Auto Studio.",
+      catalogEligible: false,
+      catalogUrl: null,
+      image: {
+        src: "/images/services/automotive-paint.jpg",
+        alt: "Vehículo moderno preparado para pintura automotriz dentro de una cabina profesional",
+        position: "center",
+      },
     },
   ],
   pending: {
@@ -118,4 +169,12 @@ export const siteConfig = {
 
 export function createWhatsAppUrl(message: string) {
   return `https://wa.me/${siteConfig.whatsapp.digits}?text=${encodeURIComponent(message)}`;
+}
+
+export function createServiceUrl(service: ServiceConfig) {
+  if (service.catalogEligible && service.catalogUrl) {
+    return service.catalogUrl;
+  }
+
+  return createWhatsAppUrl(service.whatsappMessage);
 }

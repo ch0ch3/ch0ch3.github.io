@@ -117,7 +117,7 @@ La pila display actual es una solución local impuesta por la restricción de no
 
 El contenido utiliza un ancho máximo de `90rem`, padding horizontal fluido y capítulos con `clamp(6rem, 12vw, 11rem)` de separación vertical. El hero es una portada fotográfica panorámica de ancho completo, seguida por una superficie marfil que enmarca la fotografía vertical del taller real. Hero y taller nunca comparten el mismo encuadre ni se presentan como si fueran la misma evidencia.
 
-La cuadrícula de servicios es exacta: tres columnas por dos filas en escritorio, dos columnas en tablet y una columna en móvil. Usa flujo denso y no admite celdas vacías. La historia usa doce columnas en escritorio, con el título en la mitad izquierda y la lectura en la mitad derecha; ambos avanzan juntos para evitar cruces con la declaración de cierre.
+La cuadrícula de servicios se compone de seis registros editoriales, cada uno unido a su propia fotografía. En escritorio y tablet cada registro usa dos columnas contiguas —texto e imagen— y alterna su dirección; en móvil se apila texto seguido de imagen. No admite celdas vacías ni fotografías compartidas entre servicios. La historia usa doce columnas en escritorio, con el título en la mitad izquierda y la lectura en la mitad derecha; ambos avanzan juntos para evitar cruces con la declaración de cierre.
 
 Los objetivos interactivos tienen al menos `44px` de altura. El sitio inicia en `320px`, no permite overflow horizontal y respeta `prefers-reduced-motion`. En móviles táctiles se reserva espacio inferior para navegadores con barras flotantes. En orientación horizontal con poca altura, navegación y logo comparten una fila, mientras el mensaje del hero se divide en dos columnas compactas para mantener visibles el titular, la descripción y la acción.
 
@@ -154,9 +154,10 @@ La geometría es rectangular por defecto. Los bordes de un píxel recuerdan plan
 
 ### Service Editorial Grid
 
-- **Structure:** encabezado rojo, promesa de apoyo y una matriz editorial de seis servicios. En escritorio se organiza en doce columnas: dos registros de servicio y una fotografía por fila; en tablet las fotografías ocupan el ancho de la matriz y en móvil todo conserva el orden de lectura.
+- **Structure:** encabezado rojo, promesa de apoyo y una matriz editorial de seis servicios. Cada servicio forma una fila de dos celdas en escritorio y tablet; el orden de texto e imagen se alterna. En móvil cada texto aparece inmediatamente antes de su fotografía.
 - **Service Registry:** número secuencial visible, título rojo, descripción y enlace específico de WhatsApp. La proximidad y el espacio reemplazan la apariencia de tarjeta cerrada.
-- **Photography:** tres imágenes verticales muestran interior terminado, pulido inalámbrico y aplicación de recubrimiento. Son activos provisionales generados para mantener coherencia visual hasta disponer de fotografías oficiales.
+- **Photography:** seis imágenes verticales muestran detallado, pulido, corrección de pintura, recubrimiento cerámico, hojalatería y pintura automotriz. Son activos provisionales generados para mantener coherencia visual hasta disponer de fotografías oficiales.
+- **WhatsApp:** los primeros cuatro servicios usan un mensaje específico mientras sus enlaces de producto del catálogo estén pendientes y cambian automáticamente al catálogo cuando se configuran. Hojalatería y pintura automotriz siempre abren una solicitud específica de valoración.
 - **Background:** blanco cálido con texto carbón y rojo Zealous; bordes de un píxel sólo como separadores de fila.
 
 ### Navigation
