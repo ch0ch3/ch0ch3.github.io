@@ -2,8 +2,8 @@
  * THESIS: Presentar el estudio y convertir interés en conversaciones reales por WhatsApp.
  * OWN-WORLD: Marfil técnico, carbón, rojo Zealous y geometría automotriz sin activos inventados.
  * STORY: Identidad, propuesta, contacto, servicios y datos esenciales.
- * FIRST VIEWPORT: Header funcional y Hero editorial con dos rutas de conversión.
- * FORM: Split asimétrico que se apila con claridad desde 320 px.
+ * FIRST VIEWPORT: Navegación integrada en la fotografía y una sola ruta de conversión.
+ * FORM: Portada cinematográfica de ancho completo que responde desde 320 px.
  */
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";

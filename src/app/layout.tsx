@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="es-MX">
       <body>
         <template
-          data-design-contract="THESIS: precisión automotriz real, no fotografía genérica. OWN-WORLD: carbón, marfil, rojo Zealous, logo oficial y retícula técnica. STORY: pasión, proceso, servicios y evaluación por WhatsApp. FIRST-VIEWPORT: texto editorial a la izquierda y fachada real a la derecha. FORM: asimetría automotriz, seed ZEALOUS-CANVA-2026. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md."
+          data-design-contract="THESIS: precisión automotriz real con una portada cinematográfica y evidencia del taller. OWN-WORLD: carbón, marfil, rojo Zealous, logo oficial y retícula técnica. STORY: portada, taller real, pasión, servicios y evaluación por WhatsApp. FIRST-VIEWPORT: navegación transparente integrada, un logo blanco, vehículo moderno, texto editorial y una sola acción. FORM: asimetría automotriz, seed ZEALOUS-CANVA-2026. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md."
           data-seed="ZEALOUS-CANVA-2026"
         />
         {children}

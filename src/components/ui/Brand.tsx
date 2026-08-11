@@ -9,7 +9,7 @@ export function Brand() {
     >
       <Image
         className="brand__logo"
-        src="/brand/zealous-logo-primary.png"
+        src="/brand/zealous-logo-reversed.png"
         alt=""
         width={2655}
         height={808}

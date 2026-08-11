@@ -46,7 +46,7 @@ components:
   button-primary:
     backgroundColor: "{colors.brand-red}"
     textColor: "#ffffff"
-    rounded: "0"
+    rounded: "999px en el CTA del hero; 0 en el resto del sistema"
     padding: "0.95rem 1.35rem"
   button-secondary:
     backgroundColor: "transparent"
@@ -115,30 +115,36 @@ La pila display actual es una solución local impuesta por la restricción de no
 
 ## Layout
 
-El contenido utiliza un ancho máximo de `90rem`, padding horizontal fluido y capítulos con `clamp(6rem, 12vw, 11rem)` de separación vertical. En escritorio, el hero se divide 52/48 entre mensaje y fachada real; por debajo de `64rem` se apila para preservar el encuadre de la fotografía vertical.
+El contenido utiliza un ancho máximo de `90rem`, padding horizontal fluido y capítulos con `clamp(6rem, 12vw, 11rem)` de separación vertical. El hero es una portada fotográfica panorámica de ancho completo, seguida por una superficie marfil que enmarca la fotografía vertical del taller real. Hero y taller nunca comparten el mismo encuadre ni se presentan como si fueran la misma evidencia.
 
-La cuadrícula de servicios es exacta: tres columnas por dos filas en escritorio, dos columnas en tablet y una columna en móvil. Usa flujo denso y no admite celdas vacías. La historia usa doce columnas en escritorio con título sticky y lectura en la mitad derecha.
+La cuadrícula de servicios es exacta: tres columnas por dos filas en escritorio, dos columnas en tablet y una columna en móvil. Usa flujo denso y no admite celdas vacías. La historia usa doce columnas en escritorio, con el título en la mitad izquierda y la lectura en la mitad derecha; ambos avanzan juntos para evitar cruces con la declaración de cierre.
 
 Los objetivos interactivos tienen al menos `44px` de altura. El sitio inicia en `320px`, no permite overflow horizontal y respeta `prefers-reduced-motion`.
 
 ## Elevation & Depth
 
-El sistema es plano por defecto. La profundidad proviene de cambios de superficie, fotografía, superposición tonal del hero y bordes de un píxel. No se utilizan sombras de tarjetas ni logotipos superpuestos sobre fotografías que ya contienen la marca.
+El sistema es plano por defecto. La profundidad proviene de cambios de superficie, fotografía, superposición tonal del hero y bordes de un píxel. No se utilizan sombras de tarjetas. El único logotipo superpuesto permitido es el activo oficial blanco sobre la portada cinematográfica; no se duplica sobre la fotografía real del taller, que ya contiene la marca.
 
 **The Flat Workshop Rule.** La jerarquía se resuelve con escala, contraste y retícula, no con paneles flotantes.
 
 ## Shapes
 
-La geometría es rectangular, sin radios decorativos. Los bordes de un píxel recuerdan planos de paneles y delimitan servicios. La única silueta expresiva es la “A” roja oficial, utilizada entre dos líneas como separador de marca.
+La geometría es rectangular por defecto. Los bordes de un píxel recuerdan planos de paneles y delimitan servicios. El CTA redondeado del hero es una excepción funcional tomada de la referencia de Canva; la otra silueta expresiva es la “A” roja oficial, utilizada entre dos líneas como separador de marca.
 
 ## Components
 
 ### Buttons
 
-- **Shape:** rectangular, sin radio, altura mínima de `3.65rem`.
+- **Shape:** rectangular por defecto, altura mínima de `3.65rem`. El CTA principal del hero es la excepción deliberada: usa silueta completamente redondeada y una flecha horizontal.
 - **Primary:** rojo Zealous con texto blanco, peso 900 y mayúsculas.
 - **Secondary:** transparente con borde blanco translúcido sobre carbón.
 - **Hover / Focus:** cambio tonal breve; focus visible de tres píxeles con separación de cuatro píxeles.
+
+### Cinematic Hero and Workshop Proof
+
+- **Hero:** fotografía panorámica provisional de un vehículo moderno en estudio oscuro, desaturada y oscurecida con una cobertura de legibilidad, titular de máximo tres líneas y el logotipo oficial blanco centrado dentro de la navegación superpuesta.
+- **Action:** un solo botón “Agenda tu cita” enlaza al mensaje confirmado de evaluación por WhatsApp. El enlace general de WhatsApp permanece en la navegación.
+- **Workshop Proof:** la fachada real vive en un bloque separado inmediatamente después del hero, dentro de un marco blanco cálido y antes de “Quiénes somos”.
 
 ### Service Editorial Grid
 
@@ -149,7 +155,7 @@ La geometría es rectangular, sin radios decorativos. Los bordes de un píxel re
 
 ### Navigation
 
-Header sticky de blanco cálido con logo oficial a la izquierda y cuatro rutas visibles. En móvil, el logo ocupa su propia fila y la navegación se distribuye en cuatro objetivos de ancho equivalente.
+Navegación absoluta y transparente dentro del hero, sin superficie blanca ni borde. El único logo del primer viewport es el activo oficial blanco centrado; debajo permanecen cuatro rutas visibles. En móvil, los destinos se distribuyen en cuatro objetivos de ancho equivalente sobre la misma fotografía oscurecida. La navegación deja de ser sticky para no flotar sobre los capítulos siguientes.
 
 ### Brand Divider
 
