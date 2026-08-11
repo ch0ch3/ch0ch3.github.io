@@ -140,12 +140,12 @@ La geometría es rectangular, sin radios decorativos. Los bordes de un píxel re
 - **Secondary:** transparente con borde blanco translúcido sobre carbón.
 - **Hover / Focus:** cambio tonal breve; focus visible de tres píxeles con separación de cuatro píxeles.
 
-### Service Registry
+### Service Editorial Grid
 
-- **Structure:** número secuencial, nombre corto, título, descripción y enlace específico de WhatsApp.
-- **Background:** marfil en reposo; carbón en hover o `focus-within` en dispositivos que soportan hover.
-- **Border:** un píxel, sin sombra ni radio.
-- **Internal Padding:** `1.25–2rem` según el viewport.
+- **Structure:** encabezado rojo, promesa de apoyo y una matriz editorial de seis servicios. En escritorio se organiza en doce columnas: dos registros de servicio y una fotografía por fila; en tablet las fotografías ocupan el ancho de la matriz y en móvil todo conserva el orden de lectura.
+- **Service Registry:** número secuencial visible, título rojo, descripción y enlace específico de WhatsApp. La proximidad y el espacio reemplazan la apariencia de tarjeta cerrada.
+- **Photography:** tres imágenes verticales muestran interior terminado, pulido inalámbrico y aplicación de recubrimiento. Son activos provisionales generados para mantener coherencia visual hasta disponer de fotografías oficiales.
+- **Background:** blanco cálido con texto carbón y rojo Zealous; bordes de un píxel sólo como separadores de fila.
 
 ### Navigation
 
