@@ -119,7 +119,7 @@ El contenido utiliza un ancho máximo de `90rem`, padding horizontal fluido y ca
 
 La cuadrícula de servicios es exacta: tres columnas por dos filas en escritorio, dos columnas en tablet y una columna en móvil. Usa flujo denso y no admite celdas vacías. La historia usa doce columnas en escritorio, con el título en la mitad izquierda y la lectura en la mitad derecha; ambos avanzan juntos para evitar cruces con la declaración de cierre.
 
-Los objetivos interactivos tienen al menos `44px` de altura. El sitio inicia en `320px`, no permite overflow horizontal y respeta `prefers-reduced-motion`.
+Los objetivos interactivos tienen al menos `44px` de altura. El sitio inicia en `320px`, no permite overflow horizontal y respeta `prefers-reduced-motion`. En móviles táctiles se reserva espacio inferior para navegadores con barras flotantes. En orientación horizontal con poca altura, navegación y logo comparten una fila, mientras el mensaje del hero se divide en dos columnas compactas para mantener visibles el titular, la descripción y la acción.
 
 ## Elevation & Depth
 
