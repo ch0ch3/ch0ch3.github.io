@@ -3,6 +3,13 @@ export type SiteConfig = {
   primaryBrand: string;
   descriptor: string;
   domain: string;
+  email: string;
+  location: {
+    address: string;
+    placeId: string;
+    embedUrl: string;
+    directionsUrl: string;
+  };
   whatsapp: {
     displayNumber: string;
     digits: string;
@@ -16,12 +23,9 @@ export type SiteConfig = {
     whatsappMessage: string;
   }[];
   pending: {
-    address: string | null;
-    googleMapsUrl: string | null;
     hours: string | null;
     socialProfiles: string | null;
     appointmentScheduleUrl: string | null;
-    publicEmail: string | null;
     prices: string | null;
     promotions: string | null;
     testimonials: string | null;
@@ -34,6 +38,15 @@ export const siteConfig = {
   primaryBrand: "Zealous Laguna",
   descriptor: "Auto Studio",
   domain: "https://www.zealouslaguna.mx",
+  email: "delachicav@zealouslaguna.mx",
+  location: {
+    address: "Blvrd el Tajito 42, El Tajito, 27100 Torreón, Coah.",
+    placeId: "ChIJl8CGEwDbj4YRwIkr8SWftPk",
+    embedUrl:
+      "https://www.google.com/maps?q=Blvrd%20el%20Tajito%2042%2C%20El%20Tajito%2C%2027100%20Torre%C3%B3n%2C%20Coah.&output=embed",
+    directionsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Zealous%20Laguna%20Auto%20Studio&query_place_id=ChIJl8CGEwDbj4YRwIkr8SWftPk",
+  },
   whatsapp: {
     displayNumber: "+52 871 400 7772",
     digits: "528714007772",
@@ -93,12 +106,9 @@ export const siteConfig = {
     },
   ],
   pending: {
-    address: null,
-    googleMapsUrl: null,
     hours: null,
     socialProfiles: null,
     appointmentScheduleUrl: null,
-    publicEmail: null,
     prices: null,
     promotions: null,
     testimonials: null,

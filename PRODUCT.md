@@ -26,6 +26,9 @@ Comarca Lagunera.
 - WhatsApp: +52 871 400 7772.
 - Service area: Comarca Lagunera.
 - Public domain: https://www.zealouslaguna.mx.
+- Address: Blvrd el Tajito 42, El Tajito, 27100 Torreón, Coah.
+- Google Maps place ID: ChIJl8CGEwDbj4YRwIkr8SWftPk.
+- Public email: delachicav@zealouslaguna.mx.
 
 ## Current goals
 
@@ -36,9 +39,7 @@ Comarca Lagunera.
 ## Pending information
 
 - Official logos and photographs.
-- Address and map location.
 - Business hours.
-- Public email addresses.
 - Social profiles.
 - Appointment Schedule URL.
 - Prices, promotions, testimonials, guarantees, and policies.

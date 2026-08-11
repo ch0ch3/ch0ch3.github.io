@@ -474,7 +474,7 @@ a {
   color: var(--color-on-dark);
 }
 
-.contact__inner {
+.contact__cta {
   display: grid;
   width: min(100%, var(--content-max));
   margin-inline: auto;
@@ -509,34 +509,131 @@ a {
   margin-top: 2.5rem;
 }
 
-.contact__facts {
+.contact__location-shell {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid rgb(255 255 255 / 18%);
+  background: #030303;
+}
+
+.contact__location-shell::before {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgb(3 3 3 / 98%) 0%, rgb(3 3 3 / 88%) 48%, rgb(3 3 3 / 48%) 100%),
+    url("/images/hero.jpg") right center / cover no-repeat;
+  content: "";
+  filter: grayscale(1) contrast(1.2);
+  opacity: 0.55;
+}
+
+.contact__location-shell::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 48%, rgb(3 3 3 / 88%) 100%);
+  content: "";
+}
+
+.contact__location {
   display: grid;
-  width: 100%;
-  padding: 0;
-  margin: clamp(4.5rem, 9vw, 7rem) 0 0;
-  border-top: 1px solid rgb(255 255 255 / 22%);
+  width: min(100%, var(--content-max));
+  margin-inline: auto;
+  padding: clamp(4rem, 8vw, 7rem) var(--page-padding) var(--section-space);
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(3.5rem, 8vw, 7rem);
   text-align: left;
 }
 
-.contact__facts div {
-  padding: 1.5rem 0;
+.contact__map-column,
+.contact__details,
+.contact__detail {
+  min-width: 0;
+}
+
+.contact__address h3,
+.contact__detail h3 {
+  margin: 0;
+  color: var(--color-brand-bright);
+  font-family: var(--font-condensed);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.contact__address address {
+  max-width: 36rem;
+  margin-top: 1rem;
+  color: var(--color-on-dark);
+  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+  font-style: normal;
+  line-height: 1.55;
+}
+
+.contact__map {
+  position: relative;
+  min-height: 20rem;
+  margin-top: 2rem;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 24%);
+  background: var(--color-night-raised);
+}
+
+.contact__map iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  inset: 0;
+}
+
+.contact__details {
+  display: grid;
+  align-content: center;
+  border-top: 1px solid rgb(255 255 255 / 22%);
+}
+
+.contact__detail {
+  padding: 2rem 0;
   border-bottom: 1px solid rgb(255 255 255 / 22%);
 }
 
-.contact__facts dt {
-  color: var(--color-brand-bright);
+.contact__detail a {
+  display: inline-flex;
+  min-height: 2.75rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0.65rem;
+  align-items: center;
+  color: var(--color-on-dark);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-decoration-color: rgb(255 255 255 / 38%);
+  text-underline-offset: 0.3rem;
+}
+
+.contact__map-link {
+  gap: 0.8rem;
   font-family: var(--font-condensed);
-  font-size: 0.65rem;
+  font-size: 0.78rem !important;
   font-weight: 900;
-  letter-spacing: 0.17em;
+  letter-spacing: 0.12em;
+  text-decoration: none;
   text-transform: uppercase;
 }
 
-.contact__facts dd {
-  margin: 0.55rem 0 0;
-  color: var(--color-on-dark);
-  font-size: 0.95rem;
-  line-height: 1.5;
+.contact__map-link svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: square;
+  stroke-linejoin: miter;
+  stroke-width: 1.5;
 }
 
 .site-footer {
@@ -603,19 +700,6 @@ a {
 
   .services__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .contact__facts {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .contact__facts div {
-    padding: 1.5rem;
-    border-bottom: 0;
-  }
-
-  .contact__facts div + div {
-    border-left: 1px solid rgb(255 255 255 / 22%);
   }
 
   .site-footer__inner {
@@ -724,6 +808,11 @@ a {
   .services__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .contact__location {
+    grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
+    align-items: stretch;
+  }
 }
 
 @media (min-width: 90rem) {
@@ -740,6 +829,7 @@ a {
   .site-navigation__link,
   .button,
   .service-card__link,
+  .contact__detail a,
   .site-footer a {
     transition:
       color 160ms var(--ease-out),
@@ -753,6 +843,7 @@ a {
   }
 
   .site-navigation__link:hover,
+  .contact__detail a:hover,
   .site-footer a:hover {
     color: var(--color-brand-bright);
   }

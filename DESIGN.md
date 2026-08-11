@@ -155,6 +155,10 @@ Header sticky de blanco cálido con logo oficial a la izquierda y cuatro rutas v
 
 Activo oficial formado por dos líneas rojas y la “A” central. Se usa en transiciones de capítulo y nunca se reconstruye con caracteres o CSS aproximado.
 
+### Contact and Map
+
+El cierre combina una pregunta directa, conversión por WhatsApp y un bloque de ubicación inspirado en la referencia de Canva. En escritorio, el mapa ocupa siete de doce columnas y los datos de contacto cinco; en móvil se apilan. La superficie usa carbón, fotografía real atenuada y encabezados rojos, con enlaces funcionales para correo, WhatsApp y Google Maps.
+
 ## Do's and Don'ts
 
 ### Do:
