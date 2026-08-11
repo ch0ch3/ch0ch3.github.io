@@ -9,7 +9,12 @@ export type SiteConfig = {
     appointmentMessage: string;
     informationMessage: string;
   };
-  services: readonly string[];
+  services: readonly {
+    name: string;
+    shortName: string;
+    description: string;
+    whatsappMessage: string;
+  }[];
   pending: {
     address: string | null;
     googleMapsUrl: string | null;
@@ -38,12 +43,54 @@ export const siteConfig = {
       "Hola, vi la página de Zealous Laguna Auto Studio y quiero información sobre sus servicios.",
   },
   services: [
-    "Detallado Automotriz",
-    "Pulido",
-    "Corrección de Pintura",
-    "Recubrimiento Cerámico",
-    "Hojalatería",
-    "Pintura",
+    {
+      name: "Detallado Automotriz",
+      shortName: "Detallado",
+      description:
+        "Limpieza profunda y cuidado preciso de cada superficie para renovar la apariencia de tu vehículo.",
+      whatsappMessage:
+        "Hola, quiero información sobre el servicio de detallado automotriz de Zealous Laguna Auto Studio.",
+    },
+    {
+      name: "Pulido",
+      shortName: "Pulido",
+      description:
+        "Recuperamos brillo y profundidad, reduciendo opacidad, marcas superficiales y pequeños rayones.",
+      whatsappMessage:
+        "Hola, quiero información sobre el servicio de pulido de Zealous Laguna Auto Studio.",
+    },
+    {
+      name: "Corrección de Pintura",
+      shortName: "Corrección",
+      description:
+        "Un proceso especializado para reducir micro-rayones, marcas circulares y defectos visibles en la pintura.",
+      whatsappMessage:
+        "Hola, quiero información sobre corrección de pintura en Zealous Laguna Auto Studio.",
+    },
+    {
+      name: "Recubrimiento Cerámico",
+      shortName: "Cerámico",
+      description:
+        "Mayor brillo, efecto hidrofóbico y una barrera de protección frente a contaminantes y agentes externos.",
+      whatsappMessage:
+        "Hola, quiero información sobre recubrimiento cerámico en Zealous Laguna Auto Studio.",
+    },
+    {
+      name: "Hojalatería",
+      shortName: "Hojalatería",
+      description:
+        "Reparamos golpes y daños en la carrocería buscando recuperar las líneas y formas originales del vehículo.",
+      whatsappMessage:
+        "Hola, quiero información sobre el servicio de hojalatería de Zealous Laguna Auto Studio.",
+    },
+    {
+      name: "Pintura Automotriz",
+      shortName: "Pintura",
+      description:
+        "Preparación, igualación de color y repintado de piezas con atención meticulosa al acabado final.",
+      whatsappMessage:
+        "Hola, quiero información sobre pintura automotriz en Zealous Laguna Auto Studio.",
+    },
   ],
   pending: {
     address: null,

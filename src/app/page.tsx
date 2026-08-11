@@ -7,8 +7,10 @@
  */
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Contact } from "@/components/sections/Contact";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
+import { Story } from "@/components/sections/Story";
 
 export default function Home() {
   return (
@@ -16,7 +18,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Story />
         <Services />
+        <Contact />
       </main>
       <Footer />
     </>

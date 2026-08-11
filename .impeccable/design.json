@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-10T00:00:00-06:00",
+  "title": "Design System: Zealous Laguna Auto Studio",
+  "extensions": {
+    "colorMeta": {
+      "brand-red": {
+        "role": "primary",
+        "displayName": "Rojo Zealous",
+        "canonical": "#e60909",
+        "tonalRamp": ["#3d0000", "#680000", "#950000", "#b50000", "#e60909", "#ff3434", "#ff8585", "#ffe8e8"]
+      },
+      "carbon": {
+        "role": "neutral",
+        "displayName": "Carbón de Taller",
+        "canonical": "#080808",
+        "tonalRamp": ["#080808", "#121212", "#242424", "#3a3a3a", "#626262", "#919191", "#c5c5c5", "#f2f2f2"]
+      },
+      "warm-ivory": {
+        "role": "neutral",
+        "displayName": "Marfil Técnico",
+        "canonical": "#f2f0ea",
+        "tonalRamp": ["#292824", "#4d4b45", "#747168", "#9b978c", "#bdb9ae", "#d8d4ca", "#ebe8e1", "#fbfaf7"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Rotulación condensada",
+        "purpose": "Titulares de alto impacto; provisional mientras el proyecto no permite fuentes externas."
+      },
+      "body": {
+        "displayName": "Lectura del sistema",
+        "purpose": "Texto descriptivo, navegación accesible y conversión."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Estados breves de botones, enlaces, servicios e imagen del hero."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "576px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "wide", "value": "1440px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal hacia evaluación por WhatsApp.",
+      "html": "<a class=\"ds-button-primary\" href=\"#\">AGENDA TU EVALUACIÓN</a>",
+      "css": ".ds-button-primary { display:inline-flex; min-height:3.65rem; padding:.95rem 1.35rem; align-items:center; justify-content:center; background:var(--color-brand); color:#fff; font-family:Arial Narrow,Arial,sans-serif; font-weight:900; letter-spacing:.12em; text-decoration:none; } .ds-button-primary:hover { background:var(--color-brand-bright); } .ds-button-primary:focus-visible { outline:3px solid var(--color-focus); outline-offset:4px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción secundaria sobre fondos oscuros.",
+      "html": "<a class=\"ds-button-secondary\" href=\"#\">WHATSAPP</a>",
+      "css": ".ds-button-secondary { display:inline-flex; min-height:3.65rem; padding:.95rem 1.35rem; align-items:center; justify-content:center; border:1px solid rgb(255 255 255 / 38%); color:var(--color-on-dark); font-family:Arial Narrow,Arial,sans-serif; font-weight:900; letter-spacing:.12em; text-decoration:none; } .ds-button-secondary:hover { background:var(--color-on-dark); color:var(--color-night); } .ds-button-secondary:focus-visible { outline:3px solid var(--color-focus); outline-offset:4px; }"
+    },
+    {
+      "name": "Service Registry Item",
+      "kind": "card",
+      "refersTo": "service-card",
+      "description": "Ficha editorial sin radio para cada servicio confirmado.",
+      "html": "<article class=\"ds-service\"><small>01 · DETALLADO</small><h3>DETALLADO AUTOMOTRIZ</h3><p>Limpieza profunda y cuidado preciso.</p><a href=\"#\">CONSULTAR SERVICIO</a></article>",
+      "css": ".ds-service { display:grid; min-height:21rem; padding:2rem; border:1px solid var(--color-ink); background:var(--color-paper); color:var(--color-ink); gap:2rem; } .ds-service small { color:var(--color-brand-dark); font-weight:900; letter-spacing:.17em; } .ds-service h3 { margin:0; font-family:Arial Narrow,Arial,sans-serif; font-size:2.25rem; line-height:.95; } .ds-service a { color:inherit; font-weight:900; text-decoration:none; border-top:1px solid currentColor; padding-top:1rem; } .ds-service:focus-within { background:var(--color-night); color:var(--color-on-dark); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "El taller bajo luz de inspección",
+    "overview": "Carbón profundo, áreas marfil limpias, líneas precisas y rojo Zealous reservado para decisiones importantes. La fotografía real del taller aporta la prueba y la interfaz organiza esa evidencia con una retícula editorial clara.",
+    "keyCharacteristics": [
+      "Alto contraste entre capítulos oscuros y marfil.",
+      "Titulares condensados, amplios y de máximo tres líneas en el hero.",
+      "Logo oficial siempre utilizado como activo.",
+      "Bordes rectos de un píxel y cuadrículas sin huecos.",
+      "Fotografía real con encuadre deliberado."
+    ],
+    "rules": [
+      { "name": "Signal Red", "body": "El rojo identifica marca, acción o estado; no se usa como relleno decorativo general.", "section": "colors" },
+      { "name": "Three-Line Hero", "body": "El titular principal se divide deliberadamente en tres líneas como máximo.", "section": "typography" },
+      { "name": "Flat Workshop", "body": "La jerarquía se resuelve con escala, contraste y retícula, no con paneles flotantes.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar activos oficiales con sus proporciones intactas.",
+      "Do utilizar fotografías reales del taller, vehículos y procesos.",
+      "Do conservar todos los controles accesibles por teclado."
+    ],
+    "donts": [
+      "Don't publicar datos del negocio sin confirmación.",
+      "Don't usar fotografías genéricas que no representen el servicio.",
+      "Don't reconstruir el logo con una fuente.",
+      "Don't añadir glassmorphism, neón, 3D o radios decorativos."
+    ]
+  }
+}

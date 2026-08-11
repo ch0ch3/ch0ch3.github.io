@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Brand() {
   return (
     <a
@@ -5,8 +7,14 @@ export function Brand() {
       href="#inicio"
       aria-label="Zealous Laguna Auto Studio — Inicio"
     >
-      <span className="brand__name">Zealous Laguna</span>
-      <span className="brand__descriptor">Auto Studio</span>
+      <Image
+        className="brand__logo"
+        src="/brand/zealous-logo-primary.png"
+        alt=""
+        width={2655}
+        height={808}
+        priority
+      />
     </a>
   );
 }

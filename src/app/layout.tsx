@@ -14,6 +14,21 @@ export const metadata: Metadata = {
     title: "Zealous Laguna Auto Studio",
     description:
       "Cuidado automotriz en la Comarca Lagunera: detallado, pulido, corrección de pintura, recubrimiento cerámico, hojalatería y pintura.",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Zealous Laguna Auto Studio: detallado, pulido y estética automotriz en la Comarca Lagunera",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zealous Laguna Auto Studio",
+    description:
+      "Cuidado automotriz en la Comarca Lagunera: detallado, pulido, corrección de pintura, recubrimiento cerámico, hojalatería y pintura.",
+    images: ["/opengraph-image.jpg"],
   },
   alternates: {
     canonical: "/",
@@ -27,7 +42,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es-MX">
-      <body>{children}</body>
+      <body>
+        <template
+          data-design-contract="THESIS: precisión automotriz real, no fotografía genérica. OWN-WORLD: carbón, marfil, rojo Zealous, logo oficial y retícula técnica. STORY: pasión, proceso, servicios y evaluación por WhatsApp. FIRST-VIEWPORT: texto editorial a la izquierda y fachada real a la derecha. FORM: asimetría automotriz, seed ZEALOUS-CANVA-2026. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md."
+          data-seed="ZEALOUS-CANVA-2026"
+        />
+        {children}
+      </body>
     </html>
   );
 }

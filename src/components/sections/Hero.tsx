@@ -14,15 +14,14 @@ export function Hero() {
     <section id="inicio" className="hero" aria-labelledby="hero-title">
       <div className="hero__content">
         <div className="hero__content-inner">
-          <p className="hero__eyebrow">Cuidado automotriz · Comarca Lagunera</p>
-
           <h1 id="hero-title" className="hero__title">
-            Zealous Laguna
-            <span>Auto Studio</span>
+            <span>Detallado automotriz,</span>
+            <span className="hero__title-accent">Pulido y</span>
+            <span>Estética automotriz</span>
           </h1>
 
           <p className="hero__subtitle">
-            Detallado, corrección y protección con atención profesional.
+            Precisión, cuidado y una verdadera pasión por los automóviles.
           </p>
 
           <p className="hero__description">
@@ -63,6 +62,8 @@ export function Hero() {
           preload
           sizes="(min-width: 64rem) 45vw, 100vw"
         />
+        <div className="hero-art__wash" aria-hidden="true" />
+        <p className="hero-art__caption">Taller real · Zealous Laguna</p>
       </div>
     </section>
   );

@@ -8,6 +8,7 @@ export type NavigationItem = {
 
 export const navigationItems: readonly NavigationItem[] = [
   { label: "Inicio", href: "#inicio" },
+  { label: "Nosotros", href: "#nosotros" },
   { label: "Servicios", href: "#servicios" },
   {
     label: "WhatsApp",
